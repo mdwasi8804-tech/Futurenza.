@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Futurenza – Find internships that fit your future</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header><div class="wrap nav">
+<a href="#top" class="logo">Future<b>nza</b></a>
+<nav class="links"><a href="#how">How it works</a><a href="#features">Features</a><a href="#demo">Try it</a><a href="#about">About</a></nav>
+<div style="display:flex;gap:8px"><button class="tg" id="theme" aria-label="Toggle theme">◐</button><a class="btn" href="#waitlist">Join waitlist</a></div>
+</div></header>
+
+<main id="top">
+<section><div class="wrap hero">
+<div>
+<span class="eyebrow">For college students &amp; early-career apprentices</span>
+<h1>Find internships that fit your future.</h1>
+<p class="lead">Futurenza matches your coursework, skills and interests to verified internships and apprenticeships, shows exactly what to learn next, and tracks every application in one place.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px"><a class="btn" href="#waitlist">Get early access →</a><a class="btn alt" href="#demo">Try the demo</a></div>
+<ul class="ticks"><li>Zero experience inflation</li><li>Curated for college timelines</li><li>Remote &amp; local metro filtering</li></ul>
+</div>
+<div class="card" aria-hidden="true">
+<div class="job" style="margin:0"><div class="av">AC</div><div><b>Distributed Systems &amp; Cloud Intern</b><div class="meta">Aether Cloud · San Francisco · Hybrid</div></div><div class="score">96%<small>match</small></div></div>
+<div class="bar"><i style="width:96%"></i></div>
+<span class="pill ok">TypeScript</span><span class="pill ok">PostgreSQL</span><span class="pill gap">Learn: Kubernetes</span>
+</div>
+</div></section>
+
+<section class="band" id="how"><div class="wrap">
+<span class="eyebrow">Three simple steps</span><h2>From profile to offer, without the guesswork.</h2>
+<div class="grid3">
+<div class="card"><div class="num">1</div><h3>Create your profile</h3><p>Add your major, coursework, skills and preferred location. Upload a resume if you like.</p></div>
+<div class="card"><div class="num">2</div><h3>Get matched opportunities</h3><p>See ranked internships with a transparent match score and the skills behind it.</p></div>
+<div class="card"><div class="num">3</div><h3>Track your applications</h3><p>Move from saved to applied to offer with deadlines and alerts in one pipeline.</p></div>
+</div></div></section>
+
+<section id="features"><div class="wrap">
+<span class="eyebrow">Core capabilities built for students</span><h2>Everything you need, nothing you don’t.</h2>
+<div class="grid3">
+<div class="card"><div class="ico">🎯</div><h3>Personalized Recommendations</h3><p>Matches weighted by coursework, skills and interests, not keyword luck.</p></div>
+<div class="card"><div class="ico">📈</div><h3>Skill-Gap Analysis</h3><p>Know which skills you already have and which to build before you apply.</p></div>
+<div class="card"><div class="ico">📄</div><h3>Resume Management</h3><p>Keep tailored versions of your resume for each track in one place.</p></div>
+<div class="card"><div class="ico">🔔</div><h3>Internship Alerts</h3><p>Get notified about new roles and closing deadlines that fit your profile.</p></div>
+<div class="card"><div class="ico">🗂️</div><h3>Application Tracking</h3><p>A clear pipeline from saved to applied, interviewing and offer.</p></div>
+<div class="card"><div class="ico">✅</div><h3>Verified Listings</h3><p>Every listing is checked, with stipend and timeline shown up front.</p></div>
+</div></div></section>
+
+<section class="band" id="demo"><div class="wrap">
+<span class="eyebrow">Interactive demo</span><h2>See how matching works.</h2>
+<p class="lead">Pick a sample student profile to see ranked matches and skill gaps. Sample data only.</p>
+<div class="tabs" id="tabs" role="group" aria-label="Sample profiles"></div>
+<div class="card" id="prof" style="margin-bottom:16px"></div>
+<div id="jobs"></div>
+</div></section>
+
+<section id="about"><div class="wrap">
+<span class="eyebrow">Our mission &amp; foundation</span><h2>Built on fairness, privacy and growth.</h2>
+<div class="grid3">
+<div class="card"><h3>Academic grounding</h3><p>Matching starts from what you study, so your degree counts for something.</p></div>
+<div class="card"><h3>Student data privacy</h3><p>Transcripts and resumes stay private and are never sold.</p></div>
+<div class="card"><h3>Actionable growth over silent rejection</h3><p>Every gap becomes a next step you can act on.</p></div>
+</div></div></section>
+
+<section class="band" id="waitlist"><div class="wrap" style="max-width:760px">
+<span class="eyebrow">Priority student access</span><h2>Join the waitlist.</h2>
+<p class="lead">Free for all enrolled college students. Apprenticeship &amp; internship tracks.</p>
+<div class="card" style="margin-top:24px">
+<form id="wl" novalidate>
+<label class="f">Full name<input name="name" autocomplete="name"><span class="err"></span></label>
+<label class="f">Email<input name="email" type="email" autocomplete="email"><span class="err"></span></label>
+<label class="f">University<input name="uni"><span class="err"></span></label>
+<label class="f">Graduation year<select name="year"><option>2026</option><option>2027</option><option selected>2028</option><option>2029</option></select></label>
+<label class="f">Major<select name="major"><option>Computer Science</option><option>Information Technology</option><option>Data Science</option><option>Design</option><option>Other</option></select></label>
+<label class="f">Preferred location<select name="loc"><option>Hybrid / Flexible</option><option>Remote</option><option>On-site</option></select></label>
+<div class="f full"><button class="btn" type="submit">Reserve my spot →</button></div>
+</form>
+<div id="done" hidden role="status"><h3>You’re on the list! 🎉</h3><p id="doneMsg"></p><button class="btn alt" id="reset" style="margin-top:12px">Submit another</button></div>
+</div></div></section>
+</main>
+
+<footer><div class="wrap fl"><span><b>Futurenza</b> · College internship &amp; apprenticeship discovery</span><span>© 2026 Futurenza. Demo content only.</span></div></footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
